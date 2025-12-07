@@ -44,9 +44,19 @@ const i18n = {
     },
     //format date accoring to locale
     formatDate: (date) => {
-        var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-        return new Intl.DateTimeFormat([locale, 'en-US'], options).format(date); //$NON-NLS-L$
+    // locale 是从 app.js 进来的，比如 "en-US" / "zh-CN" / "nl-NL"
+    const loc = (locale || 'en-US').toLowerCase();
+
+    // ★ 只要是中文（zh-CN），就不要星期几
+    if (loc === 'zh-cn') {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Intl.DateTimeFormat('zh-CN', options).format(date);
     }
+
+    // 其它语言：保留原来的 “weekday + 月/日/年”
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+    return new Intl.DateTimeFormat([locale, 'en-US'], options).format(date); //$NON-NLS-L$
+}
 }
 
 //used to determine the correct currency symbol

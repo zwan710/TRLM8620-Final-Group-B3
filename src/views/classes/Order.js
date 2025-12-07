@@ -41,8 +41,9 @@ class Order {
             return i18n.getString("Order",      "statusShipped");
         }
         else{
-            return "Delivered";
-        }
+    return i18n.getString("Order", "statusDelivered");
+}
+
     }
 
 }

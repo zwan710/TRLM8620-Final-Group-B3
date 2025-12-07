@@ -39,7 +39,7 @@ let Cart = {
                                     </div>
                                     <div class="cartPrice">
                                         <div class="gridPrice">
-                                            ${i18n.formatCurrency(value.price * value.qty, "w")}
+                                            ${i18n.formatCurrency(value.price * value.qty, i18n.locale)}
                                         </div>
                                         <img src="img/delete.svg" class="delete" id="${value.productID}" alt="${deleteAlt}">
                                     </div>
@@ -50,7 +50,7 @@ let Cart = {
                             <div class="cartTotal">
                                 <h3>${totalTitle}</h3>
                                 <div class="totalPrice">
-                                    ${i18n.formatCurrency(total, "w")}
+                                    ${i18n.formatCurrency(total, i18n.locale)}
                                 </div>
                             </div>
                             <a class="checkoutButt" href="./#/checkout">${checkoutLabel}</a>

@@ -44,7 +44,8 @@
     },
     "Home": {
         "welcomeSubtitle": "We provide everything you need to take on the Galactization (G11n) Challenge (and win).",
-        "symbolAlt": "Imperial Credit currency symbol"
+        "symbolAlt": "Imperial Credit currency symbol",
+        "welcomeTitle": "Welcome to Galaxy L10n Supplies!"
     },
     "Browse": {
         "browseTitleAll": "All",
@@ -79,7 +80,13 @@
         "termsStatement": "I have read and agree to the Terms and Conditions",
         "termsLink": "(View)",
         "successMessage": "Order placed successfully!",
-        "noItemMessage": "Add items to cart to checkout."
+        "noItemMessage": "Add items to cart to checkout.",
+        "monthPlaceholder": "MM",
+        "yearPlaceholder": "YY",
+        "ignoreMsg": "Students: Please ignore any i18n errors on this page! (Incl. name order, date input, etc.)"
+
+
+
     },
     "ProductShow": {
         "qtyLabel": "Qty: ",
@@ -95,7 +102,8 @@
     },
     "Order": {
         "statusProcessing": "Processing",
-        "statusShipped": "Shipped"
+        "statusShipped": "Shipped",
+        "statusDelivered": "Delivered"
     },
     "OrderHistory": {
         "historyTitle": "Order History",
